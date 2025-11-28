@@ -1,0 +1,31 @@
+{
+  "name": "current-time-widget",
+  "displayName": "Current Time Widget",
+  "description": "Displays current time in status bar",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "current-time-widget.showDate",
+        "title": "Show Current Date",
+        "category": "Time Widget"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.60.0",
+    "@types/node": "16.x",
+    "typescript": "^4.9.4"
+  }
+}
